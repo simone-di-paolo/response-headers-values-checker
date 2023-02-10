@@ -1,5 +1,5 @@
 {
-    // Comments are accepted in the manifest, even though it is JSON.
+
     "manifest_version": 3,
     "name": "Response Headers Values Checker",
     "description": "This extension will create a Popup that will show the requested value without open the Network tab (if exist).",
@@ -14,7 +14,7 @@
         "default_title": "Response Headers Values Checker",
         "default_popup": "popup/popup.html"
     },
-    "permissions": [],
+    "permissions": ["storage", "activeTab", "scripting"],
     "host_permissions": [
         "*://*/*"
     ],
@@ -22,7 +22,7 @@
         "service_worker": "service-worker.js"
     },
     "content_scripts": [{
-        "js": ["foreground.js"],
-        "matches": ["https://github.com/*"]
+        "js": ["foreground.js", "popup/popup.js", "popup/utils.js"],
+        "matches": ["<all_urls>"]
     }]
 }
