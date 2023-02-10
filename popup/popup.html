@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="popup.css">
-    <title>Chrome Addon v3: popup</title>
-</head>
-<body>
-    This is the <span class="special-text">HTML</span> body of the addon.
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="popup.css">
+        <title>Response Headers Values Checker</title>
+    </head>
+    <body>
+        <div class="popup-header text-font-family" id="header">
+            <div class="logo">
+                          <span class="icon" id="logo-id">
+                              <!--<svg>
+                                  <use xlink:href="#logo"></use>
+                              </svg>-->
+                            <img src="/images/logo-sdp.png"/>
+                          </span>
+                Response Headers Values Checker
+            </div>
+            <h3 class="popup--title mb-8 popup--title__saving-confirmation hidden text-font-family" id="success-text">
+                SAVED!
+            </h3>
+        </div>
+        <div class="popup-body" id="body">
+
+            <div class="tabs-container">
+                <section id="settings-section">
+                    <h3 class="popup--title mb-8 text-font-family">
+                        Values to check
+                    </h3>
+                    <div class="row-center" id="settings-div">
+                        <div class="row-center row-center--variant">
+                            <input class="custom-input-script-length" type="text" name="custom" id="values-url"/>
+                        </div>
+                    </div>
+                    <div class="row-center" id="script-required-div">
+                        <div class="row-center row-center--variant">
+                            <span class="text-small text-font-family"><b>N.B.: Separated by comma, without quotes</b></span>
+                        </div>
+                    </div>
+                </section>
+                <section id="results-section">
+                    <h3 class="popup--title mb-8 text-font-family">
+                        Results
+                    </h3>
+                    <div class="row-center" id="results-div">
+                        <div class="row-center row-center--variant">
+                            <span id="results-span" class="text-normal text-font-family">asdsasdsa</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </body>
 </html>
