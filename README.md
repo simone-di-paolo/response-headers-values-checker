@@ -15,6 +15,6 @@ In order to make the extension works correctly, refresh the page before trying t
 
 N.B.: if you have a page that autorefresh somewhere the value retrieved will be updated with the latest page refreshed.
 
-## <i align="center">Screen</i>
+## <i align="center">Screenshot</i>
 
 <img src="images/screen.jpg" width="300px">
