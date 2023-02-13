@@ -1,3 +1,10 @@
+<br />
+<div align="center">
+  <a href="https://github.com/simone-di-paolo">
+    <img src="./images/logo-sdp.png" alt="Logo" width="80" height="80">
+  </a>
+</div>
+
 <div align="center">
     <!--<img src="https://raw.githubusercontent.com/SimGus/chrome-addon-v3-starter/master/logo/logo-128.png"/>-->
     <h1>Response Headers Values Checker</h1>
