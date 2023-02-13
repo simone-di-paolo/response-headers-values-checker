@@ -8,7 +8,7 @@
 <div align="center">
     <!--<img src="https://raw.githubusercontent.com/SimGus/chrome-addon-v3-starter/master/logo/logo-128.png"/>-->
     <h1>Response Headers Values Checker</h1>
-  <img src="./logo/logo-128.png"></img>
+  <img src="./logo/logo-128.png" width="50px"></img>
 </div>
 
 ## What is this?
