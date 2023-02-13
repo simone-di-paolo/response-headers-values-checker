@@ -6,20 +6,10 @@ var count = 0;
 if(typeof contentScriptWorker === 'undefined') {
     const contentScriptWorker = function () {
         var val = getValuesFromResponse();
-        // clear
-        /*chrome.storage.local.clear(function() {
-            var error = chrome.runtime.lastError;
-            if (error) {
-                console.error(error);
-            }
-        });
-         */
-        // re-save
         chrome.storage.local.set({'responseValues': val}, function() {
             //console.log("Test done: " + val);
             // setting response value
         })
-
     }
     contentScriptWorker();
 }
@@ -29,21 +19,6 @@ function getValuesFromResponse() {
     req.open("get", document.location, false);
     req.send(null)
     return req.getAllResponseHeaders().toLowerCase()
-}
-
-function valuesWorker() {
-    var valuesArray = [];
-    var valuesInputText = localStorage.getItem("valuesInput");
-
-    if (valuesInputText === undefined || valuesInputText === null || valuesInputText === '') {
-        chrome.storage.local.get('valuesInput', function(obj) {
-            if(obj.valuesInput !== undefined && obj.valuesInput !== '') {
-                valuesInputText = obj.valuesInput;
-                checkValuesInHeaderResponse(valuesInputText);
-            }
-        });
-    }
-    return valuesArray;
 }
 
 function checkValuesInHeaderResponse(valuesInputText) {
