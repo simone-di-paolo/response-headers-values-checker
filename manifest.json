@@ -9,7 +9,6 @@
         "48": "logo/logo-48.png",
         "128": "logo/logo-128.png"
     },
-    "options_page": "settings/settings.html",
     "action": {
         "default_title": "Response Headers Values Checker",
         "default_popup": "popup/popup.html"
@@ -19,10 +18,11 @@
         "*://*/*"
     ],
     "background": {
-        "service_worker": "service-worker.js"
+        "service_worker": "background.js"
     },
     "content_scripts": [{
-        "js": ["foreground.js", "popup/popup.js", "popup/utils.js"],
-        "matches": ["<all_urls>"]
+        "js": ["popup/popup.js", "popup/utils.js"],
+        "matches": ["<all_urls>"],
+        "run_at": "document_end"
     }]
 }
