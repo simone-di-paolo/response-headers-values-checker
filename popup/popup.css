@@ -24,6 +24,12 @@ button {
     margin-top: 8px;
 }
 
+.extension-title {
+    font-family: Roboto, serif;
+    font-size: 24px;
+
+}
+
 button.current {
     box-shadow: 0 0 0 2px white,
     0 0 0 4px black;
@@ -126,6 +132,10 @@ body {
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
     padding: 18px;
+    border: solid;
+    border-width: 10px;
+    border-color: #e65100;
+    box-sizing: border-box;
 }
 
 a {
@@ -1847,9 +1857,10 @@ body.model-active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
     font-size: 20px;
     font-weight: 800;
     line-height: 1.5;

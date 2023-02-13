@@ -35,27 +35,28 @@ function worker() {
             if(headers !== '' ) {
 
                 // get headers as an array
-                var headersArray = headers.trim().split(/[\r\n]+/);
+                if (typeof headers !== undefined) {
+                    var headersArray = headers.trim().split(/[\r\n]+/);
+    
+                    var foundValues = [];
+                    var count = 0;
 
-                var foundValues = [];
-                var count = 0;
-
-                for(var i=0;i <values.length; i++) {
-                    for(var j=0; j<headersArray.length; j++) {
-                        if(headersArray[j].startsWith(values[i])) {
-                            foundValues[count] = headersArray[j]
-                            count++;
+                    for (var i = 0; i < values.length; i++) {
+                        for (var j = 0; j < headersArray.length; j++) {
+                            if (headersArray[j].startsWith(values[i])) {
+                                foundValues[count] = headersArray[j]
+                                count++;
+                            }
+                        }
+                    }
+                    if (foundValues.length > 0) {
+                        injector(foundValues);
+                    } else {
+                        if (!section.classList.contains("disabled")) {
+                            section.classList.add("disabled");
                         }
                     }
                 }
-                if(foundValues.length > 0) {
-                    injector(foundValues);
-                } else {
-                    if(!section.classList.contains("disabled")) {
-                        section.classList.add("disabled");
-                    }
-                }
-
             }
         });
     }
