@@ -13,7 +13,7 @@ readed from the header response.
 All the values you will insert must be separated by comma (for example: date, cache-control, dispatcher).
 In order to make the extension works correctly, refresh the page before trying to read the values.
 
-N.B.: if you have a page that autorefresh somewhere the value retrieved will be updated with the latest page refreshed.
+N.B.: if you have a page that autorefresh somewhere, the value retrieved will be updated with the latest page refreshed.
 
 ## <i align="center">Screenshot</i>
 
