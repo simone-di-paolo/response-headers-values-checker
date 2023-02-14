@@ -29,3 +29,6 @@ N.B.: if you have a page that autorefresh somewhere, the value retrieved will be
 ## <i align="center">Screenshot</i>
 
 <img src="images/screen.jpg" width="300px">
+
+## Chrome Web Store Link
+The extension is available on the Chrome Web Store at <a href="https://chrome.google.com/webstore/detail/response-headers-values-c/dhjmcfcpggggdboefclnkdaipkpfmfhn">this link</a>.
