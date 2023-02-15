@@ -1,12 +1,10 @@
 try {
     // on page change
-    chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-        if (!tab.url.startsWith("chrome://") && changeInfo.status === 'complete') {
+    chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+        if (changeInfo.status === 'complete' && tab.url && !tab.url.startsWith('chrome://extensions/')) {
             chrome.scripting.executeScript({
-                files: ['contentScript.js'],
-                target: {
-                    tabId: tab.id
-                }
+                target: {tabId: tabId},
+                files: ['contentScript.js']
             });
         }
     });
