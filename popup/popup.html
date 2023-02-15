@@ -9,13 +9,18 @@
         <div class="popup-header text-font-family" id="header">
             <div class="logo">
               <span class="icon" id="logo-id">
-                <img src="/images/logo-sdp.png"/>
+                  <a href="https://github.com/simone-di-paolo" target="_blank">
+                    <img src="/images/logo-sdp.png" alt="simone-di-paolo-sdp"/>
+                  </a>
               </span>
                 <h1 class="extension-title">Response Headers Values Checker</h1>
             </div>
-            <h3 class="popup--title mb-8 popup--title__saving-confirmation hidden text-font-family" id="success-text">
+            <h3 class="popup--title mb-8 popup--title__saving-confirmation hidden text-font-family saved-position" id="success-text">
                 SAVED!
             </h3>
+            <div>
+                <button class="button start-stop-btn disabled" id="toggle-btn">START</button>
+            </div>
         </div>
         <div class="popup-body" id="body">
 
@@ -34,6 +39,12 @@
                             <span class="text-small text-font-family"><b>N.B.: Separated by comma, without quotes</b></span>
                         </div>
                     </div>
+                </section>
+                <section id="countdown-section" class="disabled">
+                    <h3 id="countdown-text-id" class="popup--title mb-8 text-font-family">
+
+                    </h3>
+
                 </section>
                 <section id="results-section" class="disabled">
                     <h3 class="popup--title mb-8 text-font-family">

@@ -2,6 +2,37 @@
     display: none;
 }
 
+.start-stop-btn {
+    min-width: 70px;
+    min-height: 30px;
+    background-color: var(--color-primary);
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 8px;
+    border-color: transparent;
+    font-size: 16px;
+    color: #e8e8e8;
+    font-weight: bold;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    box-shadow: #424242;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.start-stop-btn:hover {
+    transform: scale(1.1);
+}
+
+.saved-position {
+    position: absolute;
+    top: 50px;
+    right: 150px;
+}
+
 .results-span {
     border: 1px solid var(--color-alternative);
     padding: 10px;
@@ -63,7 +94,7 @@ img {
 }
 
 button, input, textarea {
-    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    font-family: Roboto, Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-family: var(--font-family);
     outline: none
 }
