@@ -1,5 +1,4 @@
 var foundValues = [];
-var valuesInputText;
 var count = 0;
 
 // check for run it once
@@ -17,8 +16,15 @@ if(typeof contentScriptWorker === 'undefined') {
 function getValuesFromResponse() {
     var req = new XMLHttpRequest();
     req.open("get", document.location, false);
-    req.send(null)
-    return req.getAllResponseHeaders().toLowerCase()
+    req.send(null);
+
+    if (req.status >= 200 && req.status < 300) {
+        return req.getAllResponseHeaders().toLowerCase();
+    } else {
+        // handle error
+        console.log('Error getting response headers: ' + req.status + ' - ' + req.statusText);
+        return '';
+    }
 }
 
 function checkValuesInHeaderResponse(valuesInputText) {
