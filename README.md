@@ -32,3 +32,17 @@ N.B.: if you have a page that autorefresh somewhere, the value retrieved will be
 
 ## Chrome Web Store Link
 The extension is available on the Chrome Web Store at <a href="https://chrome.google.com/webstore/detail/response-headers-values-c/dhjmcfcpggggdboefclnkdaipkpfmfhn">this link</a>.
+
+## UPDATES
+
+<h3>16-02-2023</h3>
+Changelog of the version v0.2.1
+
+Features:
+- Added a start/stop button and created a logic for it
+- Added a logic that will refresh the page after the click on start/stop button
+- Added a countdown timer that shows seconds remains before updating the values in popup (after the start/stop button click)
+
+Bugfix:
+- Now the scripts won't be executed into chrome://extensions* tabs.
+- General bugfixing
