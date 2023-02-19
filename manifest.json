@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Response Headers Values Checker",
     "description": "This extension will create a Popup that will show the requested value without open the Network tab (if exist).",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "icons": {
         "16": "logo/logo-16.png",
         "48": "logo/logo-48.png",
