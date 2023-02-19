@@ -32,7 +32,6 @@ function init() {
 }
 
 function worker() {
-    debugger;
     if (valuesInput != null) {
 
         var valuesInputText = valuesInput.value;
@@ -196,7 +195,6 @@ function refreshAndReload(relaunchWorkerTime) {
         });
     }, 500);
 
-    debugger;
     countdownToRefresh(relaunchWorkerTime/1000);
     // relaunching the worker so the popup can be updated
     setTimeout(function() {
