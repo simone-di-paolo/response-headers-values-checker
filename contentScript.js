@@ -1,5 +1,4 @@
 // check for run it once
-debugger;
 if(typeof contentScriptWorker === 'undefined') {
     const contentScriptWorker = function () {
         var val = getValuesFromResponse();
@@ -10,7 +9,6 @@ if(typeof contentScriptWorker === 'undefined') {
     }
 
     chrome.storage.local.get(["enabled"], function (result) {
-        debugger;
         var isEnabledInFunction = result.enabled || false;
         if (isEnabledInFunction) {
 
